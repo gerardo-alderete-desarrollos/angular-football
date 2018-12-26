@@ -5,13 +5,13 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <div class="collapse navbar-collapse display-flex" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Competencias
             </a>
-            <div  class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+            <div  class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdownMenuLink" >
               <ng-container *ngFor="let competencia of  getTopCompetencias(5)">
                   <a class="dropdown-item" href="#">{{ competencia.name }}</a>
               </ng-container>
@@ -21,7 +21,7 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Areas
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdownMenuLink">
               <ng-container *ngFor="let area of getTopAreas(5)">
                 <a class="dropdown-item" href="#">{{ area.name }}</a>
               </ng-container>              
@@ -31,7 +31,7 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Equipos
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <div class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdownMenuLink">
               <ng-container *ngFor="let equipo of getTopEquipos(5)">
                 <a class="dropdown-item" href="#">{{ equipo.name }}</a>
               </ng-container>
