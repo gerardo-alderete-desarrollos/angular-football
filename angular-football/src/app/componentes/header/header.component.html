@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-header">
+    <a class="navbar-brand" href="">
+      <img src="https://www.football-data.org/assets/logo.jpg" alt="Logo de la pagina Football">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Competencias
+            </a>
+            <div  class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+              <ng-container *ngFor="let competencia of  getTopCompetencias(5)">
+                  <a class="dropdown-item" href="#">{{ competencia.name }}</a>
+              </ng-container>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Areas
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <ng-container *ngFor="let area of getTopAreas(5)">
+                <a class="dropdown-item" href="#">{{ area.name }}</a>
+              </ng-container>              
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Equipos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <ng-container *ngFor="let equipo of getTopEquipos(5)">
+                <a class="dropdown-item" href="#">{{ equipo.name }}</a>
+              </ng-container>
+            </div>
+        </li>
+      </ul>
+      <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+    </div>
+</nav>

@@ -10,7 +10,7 @@ import { CurrentSeason } from '../models/current-season';
 const COMPETITIONS_URL = 'http://api.football-data.org/v2/competitions';
 const API_KEY = '29f3aaccadd34f6e87041fbc08244562';
 const HEADERS = {
-  'X-Auth-Token': '29f3aaccadd34f6e87041fbc08244562'
+  'X-Auth-Token': API_KEY
 }
 const OPTIONS = {
   headers: new HttpHeaders(HEADERS),

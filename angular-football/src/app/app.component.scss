@@ -1,15 +1,12 @@
 .container {
-    background: gray;
     min-height: 100vh;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 2em 1fr 2em;
+    grid-template-rows: 4em 1fr 2em;
     grid-gap: 1.5m;
+    background: gray; 
 }
 
-ul {
-    list-style: none;
-}
 
 
 
